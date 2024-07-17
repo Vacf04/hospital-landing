@@ -1,0 +1,437 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.button {
+  background: #0099ff;
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+  display: block;
+  max-width: max-content;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.button:hover,
+.button:focus {
+  color: #333333;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.header nav ul {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.header nav ul li a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.header nav ul li {
+  position: relative;
+}
+
+.footer-nav ul li {
+  position: relative;
+}
+
+.header nav ul li::before,
+.footer-nav ul li::before {
+  content: "";
+  width: 0%;
+  background: #333333;
+  position: absolute;
+  height: 0.1rem;
+  bottom: 0.2rem;
+  transition: 0.3s;
+}
+
+.header nav ul li:hover:before,
+.footer-nav ul li:hover::before {
+  width: 100%;
+}
+
+.introduction h1,
+.about h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: #333333;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.introduction h1 {
+  font-size: 3.5rem;
+}
+
+.about h1 {
+  font-size: 2.2rem;
+}
+
+.introduction p,
+.about p {
+  margin-bottom: 1rem;
+  color: #999999;
+  font-weight: 500;
+}
+
+.about p {
+  line-height: 1.8;
+  width: 100%;
+}
+
+.introduction p {
+  max-width: 45ch;
+  line-height: 1.5;
+}
+
+.introduction-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.services,
+.doctors {
+  background: #d7f1f6;
+}
+
+.services-content,
+.doctors-content,
+.testimonials-content,
+.introduction-content {
+  padding: 5rem 2rem;
+}
+
+.doctors-content {
+  padding-bottom: 10rem;
+}
+
+.services-text,
+.doctors-text {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-text h1,
+.doctors-text h1,
+.testimonials h1 {
+  font-size: 2.5rem;
+  color: #333333;
+  font-weight: bold;
+  line-height: 1.1;
+  padding-top: 1.5rem;
+}
+
+.services-text span,
+.about span,
+.doctors-text span,
+.testimonials span {
+  font-size: 1.5rem;
+  color: #333333;
+  font-weight: 500;
+}
+
+.offered-services {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 9rem;
+  gap: 6rem;
+}
+
+.service {
+  background: #fff;
+  border-radius: 0.25rem;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.service h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333333;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.service p {
+  color: #999999;
+}
+
+.service img {
+  position: absolute;
+  top: -4rem;
+  left: 5.7rem;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.about h1 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.about .button {
+  margin-top: 3rem;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.doctor {
+  position: relative;
+  width: 16rem;
+}
+
+.doctor-dates {
+  padding: 1rem;
+  width: 90%;
+  min-height: 8rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: -5rem;
+  left: 5%;
+  display: grid;
+  grid-template-rows: 1fr 2.5fr 1fr;
+}
+
+.doctor-social {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.doctor-social img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.doctor-dates h2 {
+  color: #333333;
+  font-size: 1.2rem;
+}
+
+.doctor-dates p {
+  color: #333333;
+}
+
+.clients-testimonials {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 3rem;
+}
+
+.client {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.client > img {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.client-text {
+  padding: 1rem;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.client-text p {
+  margin-top: 1rem;
+  color: #333333;
+}
+
+.client-text h2 {
+  font-size: 1.2rem;
+}
+
+.client-text img {
+  padding-top: 2rem;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.testimonial-contact {
+  padding: 3rem;
+  width: 100%;
+  background: #333333;
+  margin-top: 5rem;
+}
+
+.testimonial-contact h1 {
+  color: #fff;
+  margin-bottom: 3rem;
+  max-width: 20ch;
+}
+
+.testimonial-contact div {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.testimonial-contact p {
+  color: #fff;
+}
+
+.footer {
+  background: #f1fafc;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
+}
+
+.footer-nav ul li {
+  max-width: max-content;
+  margin-bottom: 2.5rem;
+}
+
+.footer-nav h3 {
+  margin-bottom: 1rem;
+}
+
+.footer-info p {
+  color: #333333;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-contact {
+  width: 100%;
+}
+
+.footer-contact h3 {
+  margin-bottom: 1rem;
+}
+
+.footer-contact input {
+  background: #494949;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.61);
+  border: solid 0.1rem #fff;
+  margin-bottom: 3rem;
+  transition: 0.3s;
+}
+
+.footer-contact input:focus,
+.footer-contact input:hover {
+  outline: none;
+  color: #494949;
+  background: #fff;
+  border-color: #333333;
+  box-shadow: 0 0 0px 2px #494949;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+@media (max-width: 1100px) {
+  .doctors-grid {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    row-gap: 10rem;
+  }
+
+  .introduction-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    justify-content: start;
+    justify-items: start;
+    gap: 2rem;
+  }
+
+  .footer-info p {
+    max-width: 40ch;
+  }
+
+  .footer-contact input {
+    max-width: 40ch;
+  }
+}
+
+@media (max-width: 580px) {
+  .doctors-grid {
+    grid-template-columns: 1fr;
+    row-gap: 8rem;
+  }
+}
