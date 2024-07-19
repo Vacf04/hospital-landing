@@ -29,3 +29,4 @@ function initMenuMobile(menu: HTMLElement, menuButton: HTMLElement) {
 const menu = document.querySelector(".menu") as HTMLElement;
 const menuButton = document.querySelector(".menu-button") as HTMLElement;
 initMenuMobile(menu, menuButton);
+
