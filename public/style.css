@@ -392,6 +392,10 @@ ul {
   list-style: none;
 }
 
+.menu-button {
+  display: none;
+}
+
 @media (max-width: 1100px) {
   .doctors-grid {
     grid-template-columns: 1fr 1fr;
@@ -410,6 +414,16 @@ ul {
     justify-items: center;
     text-align: center;
   }
+
+  .introduction-content .button,
+  .about-content .button,
+  .introduction-content p {
+    margin: 0 auto;
+  }
+
+  .introduction-content .button {
+    margin-top: 1em;
+  }
 }
 
 @media (max-width: 768px) {
@@ -427,11 +441,115 @@ ul {
   .footer-contact input {
     max-width: 40ch;
   }
+
+  .menu {
+    display: none;
+    animation: show-left 0.3s forwards;
+  }
+
+  .menu.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 60vw;
+    background-color: #fff;
+    box-shadow: -40vw 0px 0px 0px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .menu.active ul {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 5rem 2rem 2rem 2rem;
+  }
+
+  .menu-button {
+    display: block;
+    z-index: 1000;
+    padding: 2rem 0;
+  }
+
+  .menu-button .line,
+  .menu-button .line::before,
+  .menu-button .line::after {
+    display: block;
+    width: 2.5rem;
+    height: 0.25rem;
+    border-radius: 0.15rem;
+    background: #000;
+    position: relative;
+  }
+
+  .menu-button .line::before {
+    content: "";
+    position: absolute;
+    bottom: 0.75rem;
+    transition: 0.3s;
+  }
+
+  .menu-button .line::after {
+    content: "";
+    position: absolute;
+    top: 0.75rem;
+  }
+
+  .menu-button.active .line::after {
+    opacity: 0;
+  }
+
+  .menu-button.active .line {
+    transform: rotate(50deg);
+    transition: 0.3s;
+  }
+
+  .menu-button.active .line::before {
+    top: 0;
+    transform: rotate(-100deg);
+  }
+
+  .header nav ul li:hover:before,
+  .footer-nav ul li:hover::before {
+    width: 0%;
+  }
 }
 
 @media (max-width: 580px) {
+  html {
+    font-size: 75%;
+  }
+
+  .service img {
+    top: -5rem;
+    left: 4.8rem;
+  }
+
   .doctors-grid {
     grid-template-columns: 1fr;
     row-gap: 8rem;
+  }
+
+  .clients-testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-contact div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: end;
+  }
+}
+
+@keyframes show-left {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
